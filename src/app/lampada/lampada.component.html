@@ -1,0 +1,15 @@
+<header>
+  <h1>Lâmpada</h1>
+</header>
+
+<main>
+  <div (mouseover)="ligaLampada=true" (mouseout)="ligaLampada=false" (click)="quebraLampada=true">
+    <img *ngIf="!ligaLampada && !quebraLampada" src="../assets/desligada.jpg">
+    <img *ngIf="ligaLampada && !quebraLampada" src="../assets/ligada.jpg">
+    <img *ngIf="quebraLampada" src="../assets/quebrada.jpg" alt="Lâmpada">
+  </div>
+
+  <div>
+    <button (click)="reset()">Reset</button>
+  </div>
+</main>
